@@ -80,7 +80,24 @@ function ListingEditScreen() {
             />
           </View>
         </View>
-       
+        {/* <ScrollView style={styles.scrollView}>
+        <Text style={styles.text}>กระเป๋า Shopping แมว Manson (เทาแมวไต่เชือก)</Text>
+        <Text style={styles.text}>กระเป๋า Shopping ลายแมว Sofia (ฟ้าแมวดำ)</Text> 
+        <Text style={styles.text}>กระเป๋า Shopping แมว Manson (เทาแมวไต่เชือก)</Text>
+        <Text style={styles.text}>กระเป๋า Shopping ลายแมว Sofia (ฟ้าแมวดำ)</Text> 
+        <Text style={styles.text}>กระเป๋า Shopping แมว Manson (เทาแมวไต่เชือก)</Text>
+        <Text style={styles.text}>กระเป๋า Shopping ลายแมว Sofia (ฟ้าแมวดำ)</Text> 
+        <Text style={styles.text}>กระเป๋า Shopping แมว Manson (เทาแมวไต่เชือก)</Text>
+        <Text style={styles.text}>กระเป๋า Shopping ลายแมว Sofia (ฟ้าแมวดำ)</Text> 
+        <Text style={styles.text}>กระเป๋า Shopping แมว Manson (เทาแมวไต่เชือก)</Text>
+        <Text style={styles.text}>กระเป๋า Shopping ลายแมว Sofia (ฟ้าแมวดำ)</Text> 
+        <Text style={styles.text}>กระเป๋า Shopping แมว Manson (เทาแมวไต่เชือก)</Text>
+        <Text style={styles.text}>กระเป๋า Shopping ลายแมว Sofia (ฟ้าแมวดำ)</Text> 
+        <Text style={styles.text}>กระเป๋า Shopping แมว Manson (เทาแมวไต่เชือก)</Text>
+        <Text style={styles.text}>กระเป๋า Shopping ลายแมว Sofia (ฟ้าแมวดำ)</Text> 
+        <Text style={styles.text}>กระเป๋า Shopping แมว Manson (เทาแมวไต่เชือก)</Text>
+        <Text style={styles.text}>กระเป๋า Shopping ลายแมว Sofia (ฟ้าแมวดำ)</Text> 
+      </ScrollView> */}
         <FormField
           keyboardType="numeric"
           maxLength={8}
@@ -104,7 +121,13 @@ function ListingEditScreen() {
             width={90}
           />
         </View>
-      
+        {/* <FormField
+          keyboardType="numeric"
+          maxLength={8}
+          name="number"
+          placeholder="จำนวนกล่อง"
+          width={320}
+        /> */}
         <View style={styles.alternativeLayoutButtonContainer}>
           <FormField
             maxLength={255}
@@ -125,7 +148,6 @@ function ListingEditScreen() {
             maxLength={255}
             name="BIN"
             numberOfLines={1}
-           
             placeholder="BIN"
             width={230}
           />
@@ -136,7 +158,14 @@ function ListingEditScreen() {
             />
           </View>
         </View>
-       
+        {/* <FormField
+          keyboardType="numeric"
+          maxLength={8}
+          name="number"
+          placeholder="ขนส่ง"
+          width={320}
+        />
+         */}
         <View style={styles.ButtonContainer}>
           <Button1 title="UPDATE" />
           <Button2 title="CLEAR" />
@@ -153,10 +182,9 @@ const styles = StyleSheet.create({
   alternativeLayoutButtonContainer: {
     flexDirection: "row",
     justifyContent: "space-between",
-    
   },
   ButtonContainer: {
-    marginTop: 200,
+    marginTop: 250,
     flexDirection: "row",
     justifyContent: "space-between",
   },

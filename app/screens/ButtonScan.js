@@ -1,7 +1,6 @@
 import React from "react";
-import { StyleSheet, Text, TouchableOpacity,Image } from "react-native";
+import { StyleSheet, Text, TouchableOpacity } from "react-native";
 import colors from "../config/colors";
-
 
 function AppButton({ title, onPress, color = "lightseagreen" }) {
   return (
@@ -9,7 +8,6 @@ function AppButton({ title, onPress, color = "lightseagreen" }) {
       style={[styles.button, { backgroundColor: colors[color] }]}
       onPress={onPress}
     >
-      <Image style={styles.logo} source={require("../assets/preview.png")} />
       <Text style={styles.text}>{title}</Text>
     </TouchableOpacity>
   );
@@ -17,24 +15,20 @@ function AppButton({ title, onPress, color = "lightseagreen" }) {
 
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: colors.lightseagreen,
-    borderRadius: 110,
-    marginTop:110,
+    backgroundColor: colors.white,
+    borderRadius: 25,
+
     justifyContent: "center",
     alignItems: "center",
-    padding:25,
-    width: 140,
-  
+    padding: 10,
+    width: 150,
+    marginVertical: 10,
   },
   text: {
     color: colors.white,
-    fontSize: 15,
+    fontSize: 20,
+    textTransform: "uppercase",
     fontWeight: "bold",
-  },
-  logo: {
-    width: 60,
-    height: 60,
-    marginBottom:1,
   },
 });
 
