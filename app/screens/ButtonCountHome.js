@@ -1,14 +1,17 @@
 import React from "react";
 import { StyleSheet, Text, TouchableOpacity,Image } from "react-native";
 import colors from "../config/colors";
+import ListingEditScreen from "./ListingEditScreen";
+
 
 
 function AppButton({ title, onPress, color = "lightseagreen" }) {
   return (
     <TouchableOpacity
       style={[styles.button, { backgroundColor: colors[color] }]}
-      onPress={onPress}
+      component={ListingEditScreen}
     >
+      
       <Image style={styles.logo} source={require("../assets/preview.png")} />
       <Text style={styles.text}>{title}</Text>
     </TouchableOpacity>
@@ -17,18 +20,19 @@ function AppButton({ title, onPress, color = "lightseagreen" }) {
 
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: colors.lightseagreen,
-    borderRadius: 110,
-    marginTop:110,
+    backgroundColor: colors.muang,
+    borderRadius: 150,
+    marginTop:70,
     justifyContent: "center",
     alignItems: "center",
-    padding:9,
-    width: 100,
-  
+    padding: 29,
+    width: 140,
+
   },
   text: {
     color: colors.white,
-    fontSize: 15,
+    fontSize: 13,
+   
     fontWeight: "bold",
   },
   logo: {

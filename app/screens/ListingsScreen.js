@@ -1,6 +1,6 @@
 import React from "react";
 import { View, StyleSheet,TouchableHighlight } from "react-native";
-import ButtonCount from "./ButtonCount";
+import ButtonCountHome from "./ButtonCountHome";
 import ButtonPacking from "./ButtonPacking";
 import routes from "../navigation/routes";
 
@@ -11,7 +11,7 @@ function ListingScreen({navigation}) {
   return (
     <View style={styles.container}>
       
-      <ButtonCount  title="Count Stock" onPress={() => navigation.navigate(routes.ListingEditScreen)}/>
+      <ButtonCountHome  title="Count Stock" />
      
       <ButtonPacking title="Packing" />
     </View>
