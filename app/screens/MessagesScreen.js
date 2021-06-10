@@ -11,16 +11,16 @@ import {
 const initialMessages = [
   {
     id: 1,
-    title: "Mosh Hamedani",
-    description: "Hey! Is this item still available?",
-    image: require("../assets/mosh.jpg"),
+    title: "Wanwisa Theptasaeng",
+    description: "DIT Support",
+    image: require("../assets/wanwisa.jpg"),
   },
   {
     id: 2,
-    title: "Mosh Hamedani",
+    title: "Wanwisa Theptasaeng",
     description:
-      "I'm interested in this item. When will you be able to post it?",
-    image: require("../assets/mosh.jpg"),
+      "Double A",
+    image: require("../assets/wanwisa.jpg"),
   },
 ];
 
@@ -57,7 +57,34 @@ function MessagesScreen(props) {
               id: 2,
               title: "T2",
               description: "D2",
-              image: require("../assets/mosh.jpg"),
+              image: require("../assets/wanwisa.jpg"),
+            },
+          ]);
+        }}
+      />
+          <FlatList
+        data={messages}
+        keyExtractor={(message) => message.id.toString()}
+        renderItem={({ item }) => (
+          <ListItem
+            title={item.title}
+            subTitle={item.description}
+            image={item.image}
+            onPress={() => console.log("Message selected", item)}
+            renderRightActions={() => (
+              <ListItemDeleteAction onPress={() => handleDelete(item)} />
+            )}
+          />
+        )}
+        ItemSeparatorComponent={ListItemSeparator}
+        refreshing={refreshing}
+        onRefresh={() => {
+          setMessages([
+            {
+              id: 2,
+              title: "T2",
+              description: "D2",
+              image: require("../assets/wanwisa.jpg"),
             },
           ]);
         }}
